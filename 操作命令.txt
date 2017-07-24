@@ -1,0 +1,22 @@
+本地写博客
+1. hexo clean
+2. hexo g
+3. hexo new post "xxx"
+4. hexo s
+
+提交静态页面
+1. hexo clean
+2. hexo d -g
+
+
+提交网页源码
+1. git status
+2. git add -A
+3. git status
+4. git commit -m "mark"
+5. git push repoName master
+
+另一台电脑
+git init
+git remote add hexo repoName
+git pull hexo master
