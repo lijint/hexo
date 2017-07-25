@@ -11,3 +11,4 @@ tags: gitlab
 ```shell
 cat ~/.ssh/id_rsa.pub
 ```
+
