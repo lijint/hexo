@@ -11,6 +11,15 @@ tags: gitlab
 ```shell
 cat ~/.ssh/id_rsa.pub
 ```
+如果电脑上还没有生成密钥对，则生成它：
 
+```shell
+ssh-keygen -t rsa -C "your_email@example.com"
+```
+
+生成后，在c盘用户文件里会有个.ssh文件夹，里面就存着要验证的密钥对，id_rsa是私钥，id_rsa.pub是公钥，用记事本打开id_rsa.pub，再将里面的内容全部拷到网上就可以了。
+![](gitlab中ssh-key的配置/gitlab_1.png)
+随后，只要点“Add key”就可以啦。
+方法和gitHub上配置ssh类似，可参考[官方教程](https://help.github.com/articles/connecting-to-github-with-ssh/)
 
 

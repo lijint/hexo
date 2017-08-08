@@ -8,7 +8,7 @@ tags: Vue
 
 # Vue学习
 >在学习前需要事先安装git和node.js，具体方法这里不赘述，可自行百度，非常简单。学习过程在VSCode上编写的，安装最新版本即可。
-
+<!--more-->
 ## 使用命令行创建项目
 打开VSCode中的命令行或者node.js或者git bash，依次输入如下命令：
 
@@ -21,4 +21,28 @@ $ vue init webpack my-project
 $ cd my-project
 $ npm install
 $ npm run dev
+```
+
+这样一个程序员最喜欢的helloworld项目就大功告成了，vue的知识点可以在[vue.js官网](https://cn.vuejs.org/)或者[菜鸟教程](http://www.runoob.com/vue2/vue-tutorial.html)里学习。
+
+# Metis的使用
+>Metis是公司基于智能pos专门开发的vue框架，通过调用组件实现高效率的前端界面实现。
+
+## 安装
+这里先介绍在vue框架中加入metis，首先，安装最新稳定版的组件，使用npm安装
+
+```shell
+npm install "git+http://git.landicorp.com/metis/metis-npm.git" --save-dev
+```
+
+随后，引入配置，工程中打开webpack.conf.js文件，按按需加载配置的方式加入以下代码：
+
+```javascript
+var merge = require('webpack-merge')
+var metisWebpackConfig = require('metis/webpack.metis.conf.js')  // 引入 Metis 配置
+
+// 合并项目配置跟 Metis 配置
+merge(metisWebpackConfig(utils), {  //  这里可传入 utils，utils 主要实现方法 assetsPath，也可以不传入
+    //  项目其他webpack配置
+})
 ```
