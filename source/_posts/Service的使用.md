@@ -15,27 +15,24 @@ tags: Andiord
 
 然后新建一个MyService继承自Service，并重写父类的onCreate()、onStartCommand()和onDestroy()方法，如下所示：
 
-```Android
+```java
 public class MyService extends Service {
     public static final String TAG = "MyService";  
     @Override  
     public void onCreate() {  
         super.onCreate();  
         Log.d(TAG, "onCreate() executed");  
-    }  
-  
+    }
     @Override  
     public int onStartCommand(Intent intent, int flags, int startId) {  
         Log.d(TAG, "onStartCommand() executed");  
         return super.onStartCommand(intent, flags, startId);  
-    }  
-      
+    }
     @Override  
     public void onDestroy() {  
         super.onDestroy();  
         Log.d(TAG, "onDestroy() executed");  
-    }  
-  
+    }
     @Override  
     public IBinder onBind(Intent intent) {  
         return null;  
@@ -45,13 +42,10 @@ public class MyService extends Service {
     
 然后，只要在MainActivity中实现这个类，用Intent的方法启动和停止服务就可以了。其中MainActivity的函数如下：
 
-```android
-public class MainActivity extends Activity implements OnClickListener {  
-  
-    private Button startService;  
-  
-    private Button stopService;  
-  
+```java
+public class MainActivity extends Activity implements OnClickListener {
+    private Button startService;
+    private Button stopService;
     @Override  
     protected void onCreate(Bundle savedInstanceState) {  
         super.onCreate(savedInstanceState);  
@@ -60,8 +54,7 @@ public class MainActivity extends Activity implements OnClickListener {
         stopService = (Button) findViewById(R.id.stop_service);  
         startService.setOnClickListener(this);  
         stopService.setOnClickListener(this);  
-    }  
-  
+    }
     @Override  
     public void onClick(View v) {  
         switch (v.getId()) {  
@@ -87,11 +80,10 @@ public class MainActivity extends Activity implements OnClickListener {
 
 Service与Activity的通信是通过绑定完成的，可以看到MyService类中，有个onBind(Intent intent)函数,上面返回的是null，如果要传递参数，则需要创建个内部类myBinder继承自Binder，然后在内部类里实现相关方法。随后在外部实现这个类，并将实现的myBinder作为onBind函数的返回值，返回给MainActivity使用。具体代码如下：
 
-``` android   
+```java   
 public class MyService extends Service {
     public MyBinder myBinder = new MyBinder();
     public static final String TAG = "MyService";
-
     public MyService() {
     }
     @Override
