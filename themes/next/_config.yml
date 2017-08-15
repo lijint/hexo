@@ -273,8 +273,8 @@ font:
   # The `size` option use `px` as unit
   logo:
     external: true
-    family: Lobster Two
-    size: 24
+    family: Monda
+    size: 500
 
   # Font settings for <code> and code blocks.
   codes:
@@ -522,7 +522,7 @@ pace: false
 pace_theme: pace-theme-minimal
 
 # Canvas-nest
-canvas_nest: true
+canvas_nest: false
 
 # three_waves
 three_waves: false
