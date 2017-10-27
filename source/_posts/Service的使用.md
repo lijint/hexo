@@ -1,7 +1,7 @@
 ---
 title: Service的使用
 date: 2017-08-08 17:23:51
-tags: Andiord
+tags: Android
 ---
 
 > Service是Android的四大组件之一，它主要用于在后台处理一些耗时的逻辑，或者去执行某些需要长期运行的任务。必要的时候我们甚至可以在程序退出的情况下，让Service在后台继续保持运行状态。

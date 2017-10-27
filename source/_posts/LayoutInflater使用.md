@@ -1,7 +1,7 @@
 ---
 title: LayoutInflater使用
 date: 2017-08-09 10:08:37
-tags: Andiord
+tags: Android
 ---
 
 >android编码中常常会使用到需要动态的加载View的情况，这时候我们就需要使用到LayoutInflate。
