@@ -46,3 +46,5 @@ git init
 git remote add hexo repoName
 git pull hexo master
 ```
+
+附：[在另一台电脑上搭建Hexo环境](https://www.jianshu.com/p/f4cc5866946b)
