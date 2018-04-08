@@ -53,6 +53,7 @@ git pull hexo master
 3. 等待一小段时间后，再运行`hexo n "xxxx"`来生成md博文时，`/source/_posts`文件夹内除了`xxxx.md`文件还有一个同名的文件夹
 4. 最后在`xxxx.md`中想引入图片时，先把图片复制到xxxx这个文件夹中，然后只需要在xxxx.md中按照markdown的格式引入图片：`![你想输入的替代文字](xxxx/图片名.jpg)`
 注意： xxxx是这个md文件的名字，也是同名文件夹的名字。只需要有文件夹名字即可，不需要有什么绝对路径。你想引入的图片就只需要放入xxxx这个文件夹内就好了，很像引用相对路径。
+![like this](hexo操作/likethis.png) ![like this1](hexo操作/likethis1.png) ![like this2](hexo操作/likethis2.png)
 5. 最后检查一下，`hexo g`生成页面后，进入`public\2017\02\26\index.html`文件中查看相关字段，可以发现，html标签内的语句是`<img src="2017/02/26/xxxx/图片名.jpg">`，而不是`<img src="xxxx/图片名.jpg>`。这很重要，关乎你的网页是否可以真正加载你想插入的图片。
 
 >ps.添加以上功能，我应该是参考一位小姐姐的博客，为什么这样说呢，因为她的博客充满了表情包，试想，一个男生应该不会这么可爱的吧。[小姐姐博客](https://blog.csdn.net/sugar_rainbow/article/details/57415705)
