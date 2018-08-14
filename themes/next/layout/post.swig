@@ -31,9 +31,9 @@
 <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
 <script>
 var gitment = new Gitment({
-  id: '页面 ID', // 可选。默认为 location.href
+  id: 'lijint', // 可选。默认为 location.href
   owner: 'lijint',
-  repo: 'https://github.com/lijint/BlogComment.git',
+  repo: 'BlogComment',
   oauth: {
     client_id: '615e19b8b12838d740e8',
     client_secret: '2a1f9df9de630e51737e0251535f6ce6a279c550',
